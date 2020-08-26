@@ -11,10 +11,7 @@ import SwiftUI
 
 
 struct ContentView: View {
-    @State private var boys = 14
-    @State private var girls = 14
-    @State var isButtonEnable = true
-    let numberOfPeople = Array(1...25)
+    @EnvironmentObject var shareData: ShareData
     
     var body: some View {
         NavigationView{
@@ -24,7 +21,7 @@ struct ContentView: View {
                 
                 VStack {
                     Text("人数を入力")
-                        .font(.title)
+                        .font(.largeTitle)
                     
                     Spacer()
                     
@@ -33,85 +30,65 @@ struct ContentView: View {
                             Text("男子")
                                 .font(.title)
                             
-                            Picker(selection: $boys, label: Text("")) {
-                                ForEach(0..<numberOfPeople.count) { index in
-                                    Text(String(self.numberOfPeople[index])).tag(index)
+                            Picker(selection: $shareData.boys, label: Text("")) {
+                                ForEach(0..<26) { index in
+                                    Text(String(index))
                                 }
-                            }.frame(width: 200)
+                            }
+                            .frame(width: 200)
                         }
                         
                         VStack {
                             Text("女子")
                                 .font(.title)
                             
-                            Picker(selection: $girls, label: Text("")) {
-                                ForEach(0..<numberOfPeople.count) { index in
-                                    Text(String(self.numberOfPeople[index])).tag(index)
+                            Picker(selection: $shareData.girls, label: Text("")) {
+                                ForEach(0..<26) { index in
+                                    Text(String(index))
                                 }
-                            }.frame(width: 200)
+                            }
+                            .frame(width: 200)
                         }
                         
                     }
                     
                     HStack {
-                        Text("男子：\(numberOfPeople[boys])人")
+                        Text("男子：\(shareData.boys)人")
                             .font(.title)
                             .padding()
-                        Text("女子：\(numberOfPeople[girls])人")
+                        Text("女子：\(shareData.girls)人")
                             .font(.title)
                             .padding()
                     }
                     
-                    Text(total(boy:numberOfPeople[boys] , girl:numberOfPeople[girls]))
+                    Text("合計：\(shareData.boys + shareData.girls)人")
                         .font(.title)
                     
                     Spacer()
-                    
                     
                     NavigationLink(destination: RowsOfSeats()){
                         Text("次へ")
                             .foregroundColor(.white)
                             .font(.headline)
-                            .frame(width: 100, height: 40)
+                            .frame(width: 120, height: 60)
                             .background(Capsule()
                                 .foregroundColor(.blue)
-                                .frame(width: 100, height: 40))
+                                .frame(width: 120, height: 60))
                             .overlay(Capsule().stroke(Color.white, lineWidth: 2))
                             .shadow(radius: 10)
                     }
-                    
                     Spacer()
                 }
-                
             }
-            .navigationBarTitle("Title")
-            .navigationBarHidden(true)
-            
         }
-        
-        
     }
-    
-    func total (boy:Int, girl:Int) -> String {
-        let result = String(boy + girl)
-        return "合計：" + result + "人"
-    }
-    
-    func checkNumberOfPeople(boy:Int, girl:Int) -> Bool {
-        let result = boy + girl
-        return 40 >= result
-    }
-    
-    
-    
 }
-
-
 
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-        
+            .environmentObject(ShareData())
     }
 }
+

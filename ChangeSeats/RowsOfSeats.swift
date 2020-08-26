@@ -9,78 +9,83 @@
 import SwiftUI
 
 struct RowsOfSeats: View {
-    @State private var columns = 5
-    @State private var rows = 5
-    @State var isButtonEnable = true
-    let numberOfPeople = [1,2,3,4,5,6,7,8]
+    @EnvironmentObject var shareData:ShareData
+    let numberOfRowsOrColumns = Array(1...8)
     
     var body: some View {
-        //NavigationView{
-            ZStack{
+        
+        ZStack{
+            
+            Color("background")
+                .edgesIgnoringSafeArea(.all)
+            VStack {
+                Text("座席の列数を入力")
+                    .font(.largeTitle)
+                Spacer()
                 
-                Color(red: 229/255, green: 250/255, blue: 248/255)
-                    .edgesIgnoringSafeArea(.all)
-                VStack {
-                    Text("座席の列数を入力")
+                HStack{
+                    VStack {
+                        Text("タテ")
+                            .font(.title)
+                        
+                        Picker(selection: $shareData.columns, label: Text("")) {
+                            ForEach(1..<9, id: \.self) { index in
+                                Text(String(index))
+                            }
+                        }
+                        .frame(width: 200)
+                    }
+                    
+                    VStack {
+                        Text("ヨコ")
+                            .font(.title)
+                        
+                        Picker(selection: $shareData.rows, label: Text("")) {
+                            ForEach(1..<9, id: \.self) { index in
+                                Text(String(index))
+                            }
+                        }
+                        .frame(width: 200)
+                    }
+                    
+                }
+                
+                HStack {
+                    Text("タテ：\(shareData.columns)列")
                         .font(.title)
-                    Spacer()
-                    
-                    HStack{
-                        VStack {
-                            Text("タテ")
-                                .font(.title)
-                            
-                            Picker(selection: $columns, label: Text("")) {
-                                ForEach(0..<numberOfPeople.count) { index in
-                                    Text(String(self.numberOfPeople[index])).tag(index)
-                                }
-                            }.frame(width: 200)
-                        }
-                        
-                        VStack {
-                            Text("ヨコ")
-                                .font(.title)
-                            
-                            Picker(selection: $rows, label: Text("")) {
-                                ForEach(0..<numberOfPeople.count) { index in
-                                    Text(String(self.numberOfPeople[index])).tag(index)
-                                }
-                            }.frame(width: 200)
-                        }
-                        
-                    }
-                    
-                    HStack {
-                        Text("タテ：\(numberOfPeople[columns])列")
-                            .font(.title)
-                            .padding()
-                        Text("ヨコ：\(numberOfPeople[rows])列")
-                            .font(.title)
-                            .padding()
-                    }
-                    
-                    Spacer()
-                    NavigationLink(destination: SelectUnusedSeats()){
-                        Text("次へ")
-                    }
-                    .foregroundColor(.white)
-                    .font(.headline)
-                    .frame(width: 100, height: 40)
-                    .background(Capsule()
-                    .foregroundColor(.blue)
-                    .frame(width: 100, height: 40))
-                    .overlay(Capsule().stroke(Color.white, lineWidth: 2))
-                    .shadow(radius: 10)
-                    Spacer()
-
+                        .padding()
+                    Text("ヨコ：\(shareData.rows)列")
+                        .font(.title)
+                        .padding()
+                }
+                
+                Spacer()
+                NavigationLink(destination: SelectUnusedSeats()){
+                    Text("次へ")
+                        .foregroundColor(.white)
+                        .font(.headline)
+                        .frame(width: 120, height: 60)
+                        .background(Capsule()
+                            .foregroundColor(.blue)
+                            .frame(width: 120, height: 60))
+                        .overlay(Capsule().stroke(Color.white, lineWidth: 2))
+                        .shadow(radius: 10)
+                }
+                
+                Spacer()
+                
             }
+            .navigationBarHidden(false)
         }
         
+        
     }
+    
     
 }
 struct RowsOfSeats_Previews: PreviewProvider {
     static var previews: some View {
         RowsOfSeats()
+            .environmentObject(ShareData())
     }
 }
