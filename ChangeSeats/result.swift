@@ -8,44 +8,52 @@
 
 import SwiftUI
 
-//やりたいこと
-//①男子の人数分の数字をランダムに配列に入れる
-//②誰かが座っているとき(shareData.usedSeats == true)のとき①で作った配列の
-//数字の図を当てはめていきたい
-
 
 struct Result: View {
     @EnvironmentObject var shareData: ShareData
     
-    //男子の人数分の番号をシャッフルして配列に入れたい↓だとできない
-    var boyShuffleNumber = Array(1...ShareData.boys).shuffled()
-    
+    @State var boySeats: [Int?] = Array(0...14)
     var body: some View {
         VStack{
             
             //横に作っていった列を縦に指定された段数だけ席を作る。
             ForEach(0..<shareData.columns) { columns in
                 HStack {
-                    
                     //指定の数だけ横に席を作っていく。
                     ForEach(0..<self.shareData.rows) { rows in
                         
-                        //shareData.usedSeat == true → 誰かが座っている
-                        //すべての席にcolumns * self.shareData.rows + rowsで番号を振り、Boolの配列で管理
-                        if self.shareData.usedSeats[columns * self.shareData.rows + rows] == true {
-                            
-                        //誰かが座っている席ならboyShuffleNumberの番号の図を表示する
-                            Image(systemName: "\(boyShuffleNumber[0]).square")
-                           
-                        
-                        } else {
-                        //誰も座っていないならxの図を出す。
-                            Image(systemName: "xmark.square")
-                        }
+                        Image(systemName: self.boySeats[columns * 5 + rows] == nil ? "xmark.square" : "\(columns * 5 + rows).square")
+                            .font(.system(size: 40))
                     }
                     .font(.system(size: 40))
                 }
             }
+        }.onAppear {
+            
+            self.boySeats.shuffled()
+            
+            var count = 0
+            for index in 0...self.shareData.usedSeats.count {
+                if self.shareData.usedSeats[index + count] == false {
+                    count += 1
+                    self.boySeats.insert(nil, at: index + count)
+                    
+                }
+                
+            }
+            print(self.boySeats)
+            
+            
+//            // 男子の人数だけ数字を入力する
+//            for index in 0..<self.shareData.boys {
+//                self.boySeats[index] = index
+//            }
+//            // [Optional(0), Optional(1), Optional(2), Optional(3), Optional(4), Optional(5), Optional(6), Optional(7), Optional(8), Optional(9), Optional(10), Optional(11), Optional(12), Optional(13), Optional(14), nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
+//            print(self.boySeats)
+//
+//            self.boySeats.shuffle()
+//            // [Optional(5), Optional(13), nil, Optional(10), Optional(11), nil, Optional(9), Optional(6), nil, Optional(4), nil, nil, nil, Optional(7), Optional(2), Optional(8), Optional(3), nil, nil, nil, Optional(14), Optional(12), Optional(1), Optional(0), nil]
+//            print(self.boySeats)
         }
     }
 }
