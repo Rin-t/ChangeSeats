@@ -21,14 +21,13 @@ struct StudentState {
 }
 
 struct RowsOfSeats: View {
-    let studentState:StudentState
+    let studentState: StudentState
     @State var rows = 6
     @State var columns = 6
     let MaxColumnsNumber = 8
     let MaxRowsNumber = 9
     
     var body: some View {
-        
         ZStack{
             Color("background")
                 .edgesIgnoringSafeArea(.all)
