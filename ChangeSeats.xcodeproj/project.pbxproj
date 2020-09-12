@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		24169F6224E663010096F381 /* SelectUnusedSeats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24169F6124E663010096F381 /* SelectUnusedSeats.swift */; };
+		2455B5F425031E3700D4759C /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2455B5F325031E3700D4759C /* Int.swift */; };
 		247AC36124F320AA004041C7 /* Explanation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247AC36024F320AA004041C7 /* Explanation.swift */; };
 		247AC36324F320D6004041C7 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247AC36224F320D6004041C7 /* Result.swift */; };
 		24892F6624E90625002CCC98 /* SelectBoyOrGirl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24892F6524E90625002CCC98 /* SelectBoyOrGirl.swift */; };
-		24892F6824E93774002CCC98 /* ShareData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24892F6724E93774002CCC98 /* ShareData.swift */; };
 		249C249124E58A16008EC2E1 /* RowsOfSeats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C249024E58A16008EC2E1 /* RowsOfSeats.swift */; };
 		24C0419724E44F470088E4CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C0419624E44F470088E4CB /* AppDelegate.swift */; };
 		24C0419924E44F470088E4CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C0419824E44F470088E4CB /* SceneDelegate.swift */; };
@@ -42,10 +42,10 @@
 
 /* Begin PBXFileReference section */
 		24169F6124E663010096F381 /* SelectUnusedSeats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectUnusedSeats.swift; sourceTree = "<group>"; };
+		2455B5F325031E3700D4759C /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 		247AC36024F320AA004041C7 /* Explanation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Explanation.swift; sourceTree = "<group>"; };
 		247AC36224F320D6004041C7 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		24892F6524E90625002CCC98 /* SelectBoyOrGirl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBoyOrGirl.swift; sourceTree = "<group>"; };
-		24892F6724E93774002CCC98 /* ShareData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareData.swift; sourceTree = "<group>"; };
 		249C249024E58A16008EC2E1 /* RowsOfSeats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowsOfSeats.swift; sourceTree = "<group>"; };
 		24C0419324E44F470088E4CB /* ChangeSeats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChangeSeats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24C0419624E44F470088E4CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -121,9 +121,9 @@
 				249C249024E58A16008EC2E1 /* RowsOfSeats.swift */,
 				24169F6124E663010096F381 /* SelectUnusedSeats.swift */,
 				24892F6524E90625002CCC98 /* SelectBoyOrGirl.swift */,
-				24892F6724E93774002CCC98 /* ShareData.swift */,
 				247AC36024F320AA004041C7 /* Explanation.swift */,
 				247AC36224F320D6004041C7 /* Result.swift */,
+				2455B5F325031E3700D4759C /* Int.swift */,
 			);
 			path = ChangeSeats;
 			sourceTree = "<group>";
@@ -290,8 +290,8 @@
 				24C0419724E44F470088E4CB /* AppDelegate.swift in Sources */,
 				24C0419924E44F470088E4CB /* SceneDelegate.swift in Sources */,
 				24892F6624E90625002CCC98 /* SelectBoyOrGirl.swift in Sources */,
-				24892F6824E93774002CCC98 /* ShareData.swift in Sources */,
 				24C0419B24E44F470088E4CB /* ContentView.swift in Sources */,
+				2455B5F425031E3700D4759C /* Int.swift in Sources */,
 				24169F6224E663010096F381 /* SelectUnusedSeats.swift in Sources */,
 				247AC36124F320AA004041C7 /* Explanation.swift in Sources */,
 			);

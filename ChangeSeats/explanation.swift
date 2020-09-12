@@ -9,51 +9,61 @@
 import SwiftUI
 
 struct Explanation: View {
-    @EnvironmentObject var shareData: ShareData
+    @State var columnSeats: [ColumnSeats]
+    @State var state: StudentState
+    
     var body: some View {
         ZStack {
             Color("background")
                 .edgesIgnoringSafeArea(.all)
             
             VStack {
-                Text("番号の振り分け")
+                Text("さぁ、運命の一瞬です")
                     .font(.largeTitle)
-                    .padding(.bottom, 10)
-                
-                Spacer()
-                    
-                Text("男子1~\(shareData.boys)番まで")
-                    .font(.title)
-                    .padding()
-                
-                Text("女子1~\(shareData.girls)番まで")
-                    .font(.title)
-                
-                Spacer()
-                
-                NavigationLink(destination: Result()){
+                    .padding(.bottom, 40)
+                NavigationLink(destination: Result(columnSeats: columnSeats, state: state)){
                     Text("Let's 抽選")
                         .foregroundColor(.white)
                         .font(.headline)
-                        .frame(width: 120, height: 60)
+                        .frame(width: 180, height: 60, alignment: .center)
                         .background(Capsule()
                             .foregroundColor(.blue)
-                            .frame(width: 120, height: 60))
+                            .frame(width: 180, height: 60))
                         .overlay(Capsule().stroke(Color.white, lineWidth: 2))
-                        .shadow(radius: 10)
-                        .padding(.bottom,40)
                 }
             }
-            
-            
+ 
+        }.onAppear{
+            self.giveShuffledNumber(columnSeats: self.columnSeats, state: self.state)
         }
         
     }
-}
-
-struct Explanation_Previews: PreviewProvider {
-    static var previews: some View {
-        Explanation()
-            .environmentObject(ShareData())
+    
+    func giveShuffledNumber(columnSeats: [ColumnSeats], state: StudentState) {
+        let boyNumber = Array(1...state.boysNumber).shuffled()
+        let girlNumber = Array(1...state.girlsNumber).shuffled()
+        var boyNumberOfArray = 0
+        var girlNumberOfArray = 0
+    
+        for i in 0...columnSeats.count - 1{
+            for j in 0...columnSeats[i].rowSeats.count - 1 {
+                if columnSeats[i].rowSeats[j].isOn {
+                    if columnSeats[i].rowSeats[j].isBoy {
+                        self.columnSeats[i].rowSeats[j].number = boyNumber[boyNumberOfArray]
+                        boyNumberOfArray += 1
+                    } else {
+                        self.columnSeats[i].rowSeats[j].number = girlNumber[girlNumberOfArray]
+                        girlNumberOfArray += 1
+                    }
+                }
+            }
+        }
     }
 }
+
+//struct Explanation_Previews: PreviewProvider {
+//    static var previews: some View {
+//        Explanation()
+//            .environmentObject(ShareData())
+//    }
+//}
