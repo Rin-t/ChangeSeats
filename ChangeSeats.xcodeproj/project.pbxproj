@@ -47,7 +47,7 @@
 		247AC36224F320D6004041C7 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		24892F6524E90625002CCC98 /* SelectBoyOrGirl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBoyOrGirl.swift; sourceTree = "<group>"; };
 		249C249024E58A16008EC2E1 /* RowsOfSeats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowsOfSeats.swift; sourceTree = "<group>"; };
-		24C0419324E44F470088E4CB /* ChangeSeats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChangeSeats.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		24C0419324E44F470088E4CB /* 席替え.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "席替え.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24C0419624E44F470088E4CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24C0419824E44F470088E4CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		24C0419A24E44F470088E4CB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; usesTabs = 0; };
@@ -101,7 +101,7 @@
 		24C0419424E44F470088E4CB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				24C0419324E44F470088E4CB /* ChangeSeats.app */,
+				24C0419324E44F470088E4CB /* 席替え.app */,
 				24C041A924E44F4C0088E4CB /* ChangeSeatsTests.xctest */,
 				24C041B424E44F4C0088E4CB /* ChangeSeatsUITests.xctest */,
 			);
@@ -171,7 +171,7 @@
 			);
 			name = ChangeSeats;
 			productName = ChangeSeats;
-			productReference = 24C0419324E44F470088E4CB /* ChangeSeats.app */;
+			productReference = 24C0419324E44F470088E4CB /* 席替え.app */;
 			productType = "com.apple.product-type.application";
 		};
 		24C041A824E44F4C0088E4CB /* ChangeSeatsTests */ = {
@@ -459,6 +459,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"ChangeSeats/Preview Content\"";
 				DEVELOPMENT_TEAM = P6K8M6RQ2W;
 				ENABLE_PREVIEWS = YES;
@@ -468,7 +469,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.r.t.astronomy.ChangeSeats;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "席替え";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -479,6 +480,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"ChangeSeats/Preview Content\"";
 				DEVELOPMENT_TEAM = P6K8M6RQ2W;
 				ENABLE_PREVIEWS = YES;
@@ -488,7 +490,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.r.t.astronomy.ChangeSeats;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "席替え";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
