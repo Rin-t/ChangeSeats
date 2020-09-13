@@ -8,8 +8,6 @@
 
 import SwiftUI
 
-
-
 class ExplanationViewModel: ObservableObject {
     @Published var columnSeats: [ColumnSeats]
     @Published var state: StudentState
@@ -27,16 +25,14 @@ class ExplanationViewModel: ObservableObject {
         
         for i in 0...columnSeats.count - 1{
             for j in 0...columnSeats[i].rowSeats.count - 1 {
-                guard columnSeats[i].rowSeats[j].isOn else {
-                    return
-                }
-                
-                if columnSeats[i].rowSeats[j].isBoy {
-                    self.columnSeats[i].rowSeats[j].number = boyNumber[boyNumberOfArray]
-                    boyNumberOfArray += 1
-                } else {
-                    self.columnSeats[i].rowSeats[j].number = girlNumber[girlNumberOfArray]
-                    girlNumberOfArray += 1
+                if columnSeats[i].rowSeats[j].isOn {
+                    if columnSeats[i].rowSeats[j].isBoy {
+                        self.columnSeats[i].rowSeats[j].number = boyNumber[boyNumberOfArray]
+                        boyNumberOfArray += 1
+                    } else {
+                        self.columnSeats[i].rowSeats[j].number = girlNumber[girlNumberOfArray]
+                        girlNumberOfArray += 1
+                    }
                 }
             }
         }

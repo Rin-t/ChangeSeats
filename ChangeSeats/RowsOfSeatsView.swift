@@ -20,9 +20,7 @@ struct StudentState {
     }   
 }
 
-//class RowsOfSeatsViewModel: ObservableObject {
-//    <#code#>
-//}
+
 
 
 
@@ -92,7 +90,7 @@ struct RowsOfSeatsView: View {
                 } else {
                     VStack{
                         Text("　")
-                        NavigationLink(destination: SelectUnusedSeats(studentState: studentState,columnSeats: createSeats(row: rows, column: columns))){
+                        NavigationLink(destination: SelectUnusedSeatsView(columnSeats: createSeats(row: rows, column: columns), state: studentState)){
                             Text("次へ")
                                 .foregroundColor(.white)
                                 .font(.headline)
