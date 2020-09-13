@@ -1,15 +1,14 @@
 //
-//  ChangeSeatsTests.swift
-//  ChangeSeatsTests
+//  ChangeSeatsTest.swift
+//  ChangeSeatsTest
 //
-//  Created by Rin on 2020/08/13.
+//  Created by Rin on 2020/09/13.
 //  Copyright © 2020 竹村凜. All rights reserved.
 //
 
 import XCTest
-@testable import ChangeSeats
 
-class ChangeSeatsTests: XCTestCase {
+class ChangeSeatsTest: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -26,7 +25,7 @@ class ChangeSeatsTests: XCTestCase {
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
-        self.measure {
+        measure {
             // Put the code you want to measure the time of here.
         }
     }

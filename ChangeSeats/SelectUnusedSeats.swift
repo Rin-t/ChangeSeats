@@ -73,7 +73,7 @@ struct SelectUnusedSeats: View {
                 if studentState.totalStudentNumber == countUsedSeats(seatsBool: columnSeats) {
                     VStack{
                         Text("　")
-                        NavigationLink(destination: SelectBoyOrGirl(state: studentState, columnSeats: columnSeats)){
+                        NavigationLink(destination: SelectBoyOrGirlView(columnSeats: columnSeats, state: studentState)){
                             Text("次へ")
                                 .foregroundColor(.white)
                                 .font(.headline)

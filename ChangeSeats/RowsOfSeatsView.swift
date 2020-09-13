@@ -20,7 +20,13 @@ struct StudentState {
     }   
 }
 
-struct RowsOfSeats: View {
+//class RowsOfSeatsViewModel: ObservableObject {
+//    <#code#>
+//}
+
+
+
+struct RowsOfSeatsView: View {
     let studentState: StudentState
     @State var rows = 6
     @State var columns = 6

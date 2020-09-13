@@ -9,23 +9,23 @@
 /* Begin PBXBuildFile section */
 		24169F6224E663010096F381 /* SelectUnusedSeats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24169F6124E663010096F381 /* SelectUnusedSeats.swift */; };
 		2455B5F425031E3700D4759C /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2455B5F325031E3700D4759C /* Int.swift */; };
+		2455B62E250DDBA600D4759C /* ChangeSeatsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2455B62D250DDBA600D4759C /* ChangeSeatsTest.swift */; };
 		247AC36124F320AA004041C7 /* ExplanationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247AC36024F320AA004041C7 /* ExplanationView.swift */; };
 		247AC36324F320D6004041C7 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247AC36224F320D6004041C7 /* Result.swift */; };
-		24892F6624E90625002CCC98 /* SelectBoyOrGirl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24892F6524E90625002CCC98 /* SelectBoyOrGirl.swift */; };
-		249C249124E58A16008EC2E1 /* RowsOfSeats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C249024E58A16008EC2E1 /* RowsOfSeats.swift */; };
+		24892F6624E90625002CCC98 /* SelectBoyOrGirlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24892F6524E90625002CCC98 /* SelectBoyOrGirlView.swift */; };
+		249C249124E58A16008EC2E1 /* RowsOfSeatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C249024E58A16008EC2E1 /* RowsOfSeatsView.swift */; };
 		24C0419724E44F470088E4CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C0419624E44F470088E4CB /* AppDelegate.swift */; };
 		24C0419924E44F470088E4CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C0419824E44F470088E4CB /* SceneDelegate.swift */; };
 		24C0419B24E44F470088E4CB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C0419A24E44F470088E4CB /* ContentView.swift */; };
 		24C0419D24E44F4B0088E4CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24C0419C24E44F4B0088E4CB /* Assets.xcassets */; };
 		24C041A024E44F4B0088E4CB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24C0419F24E44F4B0088E4CB /* Preview Assets.xcassets */; };
 		24C041A324E44F4B0088E4CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24C041A124E44F4B0088E4CB /* LaunchScreen.storyboard */; };
-		24C041AE24E44F4C0088E4CB /* ChangeSeatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C041AD24E44F4C0088E4CB /* ChangeSeatsTests.swift */; };
 		24C041B924E44F4C0088E4CB /* ChangeSeatsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C041B824E44F4C0088E4CB /* ChangeSeatsUITests.swift */; };
 		8DEE7BD1250D01760039B2A4 /* NumberPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE7BD0250D01760039B2A4 /* NumberPicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		24C041AA24E44F4C0088E4CB /* PBXContainerItemProxy */ = {
+		2455B630250DDBA600D4759C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 24C0418B24E44F470088E4CB /* Project object */;
 			proxyType = 1;
@@ -44,10 +44,13 @@
 /* Begin PBXFileReference section */
 		24169F6124E663010096F381 /* SelectUnusedSeats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectUnusedSeats.swift; sourceTree = "<group>"; };
 		2455B5F325031E3700D4759C /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
+		2455B62B250DDBA600D4759C /* ChangeSeatsTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChangeSeatsTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2455B62D250DDBA600D4759C /* ChangeSeatsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeSeatsTest.swift; sourceTree = "<group>"; };
+		2455B62F250DDBA600D4759C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		247AC36024F320AA004041C7 /* ExplanationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplanationView.swift; sourceTree = "<group>"; };
 		247AC36224F320D6004041C7 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		24892F6524E90625002CCC98 /* SelectBoyOrGirl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBoyOrGirl.swift; sourceTree = "<group>"; };
-		249C249024E58A16008EC2E1 /* RowsOfSeats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowsOfSeats.swift; sourceTree = "<group>"; };
+		24892F6524E90625002CCC98 /* SelectBoyOrGirlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBoyOrGirlView.swift; sourceTree = "<group>"; };
+		249C249024E58A16008EC2E1 /* RowsOfSeatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowsOfSeatsView.swift; sourceTree = "<group>"; };
 		24C0419324E44F470088E4CB /* 席替え.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "席替え.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24C0419624E44F470088E4CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24C0419824E44F470088E4CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,9 +59,6 @@
 		24C0419F24E44F4B0088E4CB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		24C041A224E44F4B0088E4CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24C041A424E44F4B0088E4CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		24C041A924E44F4C0088E4CB /* ChangeSeatsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChangeSeatsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		24C041AD24E44F4C0088E4CB /* ChangeSeatsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeSeatsTests.swift; sourceTree = "<group>"; };
-		24C041AF24E44F4C0088E4CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24C041B424E44F4C0088E4CB /* ChangeSeatsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChangeSeatsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		24C041B824E44F4C0088E4CB /* ChangeSeatsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeSeatsUITests.swift; sourceTree = "<group>"; };
 		24C041BA24E44F4C0088E4CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -66,14 +66,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		24C0419024E44F470088E4CB /* Frameworks */ = {
+		2455B628250DDBA600D4759C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		24C041A624E44F4C0088E4CB /* Frameworks */ = {
+		24C0419024E44F470088E4CB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -90,12 +90,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2455B62C250DDBA600D4759C /* ChangeSeatsTest */ = {
+			isa = PBXGroup;
+			children = (
+				2455B62D250DDBA600D4759C /* ChangeSeatsTest.swift */,
+				2455B62F250DDBA600D4759C /* Info.plist */,
+			);
+			path = ChangeSeatsTest;
+			sourceTree = "<group>";
+		};
 		24C0418A24E44F470088E4CB = {
 			isa = PBXGroup;
 			children = (
 				24C0419524E44F470088E4CB /* ChangeSeats */,
-				24C041AC24E44F4C0088E4CB /* ChangeSeatsTests */,
 				24C041B724E44F4C0088E4CB /* ChangeSeatsUITests */,
+				2455B62C250DDBA600D4759C /* ChangeSeatsTest */,
 				24C0419424E44F470088E4CB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -104,8 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				24C0419324E44F470088E4CB /* 席替え.app */,
-				24C041A924E44F4C0088E4CB /* ChangeSeatsTests.xctest */,
 				24C041B424E44F4C0088E4CB /* ChangeSeatsUITests.xctest */,
+				2455B62B250DDBA600D4759C /* ChangeSeatsTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -120,9 +129,9 @@
 				24C041A124E44F4B0088E4CB /* LaunchScreen.storyboard */,
 				24C041A424E44F4B0088E4CB /* Info.plist */,
 				24C0419E24E44F4B0088E4CB /* Preview Content */,
-				249C249024E58A16008EC2E1 /* RowsOfSeats.swift */,
+				249C249024E58A16008EC2E1 /* RowsOfSeatsView.swift */,
 				24169F6124E663010096F381 /* SelectUnusedSeats.swift */,
-				24892F6524E90625002CCC98 /* SelectBoyOrGirl.swift */,
+				24892F6524E90625002CCC98 /* SelectBoyOrGirlView.swift */,
 				247AC36024F320AA004041C7 /* ExplanationView.swift */,
 				247AC36224F320D6004041C7 /* Result.swift */,
 				2455B5F325031E3700D4759C /* Int.swift */,
@@ -139,15 +148,6 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		24C041AC24E44F4C0088E4CB /* ChangeSeatsTests */ = {
-			isa = PBXGroup;
-			children = (
-				24C041AD24E44F4C0088E4CB /* ChangeSeatsTests.swift */,
-				24C041AF24E44F4C0088E4CB /* Info.plist */,
-			);
-			path = ChangeSeatsTests;
-			sourceTree = "<group>";
-		};
 		24C041B724E44F4C0088E4CB /* ChangeSeatsUITests */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +160,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2455B62A250DDBA600D4759C /* ChangeSeatsTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2455B632250DDBA600D4759C /* Build configuration list for PBXNativeTarget "ChangeSeatsTest" */;
+			buildPhases = (
+				2455B627250DDBA600D4759C /* Sources */,
+				2455B628250DDBA600D4759C /* Frameworks */,
+				2455B629250DDBA600D4759C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2455B631250DDBA600D4759C /* PBXTargetDependency */,
+			);
+			name = ChangeSeatsTest;
+			productName = ChangeSeatsTest;
+			productReference = 2455B62B250DDBA600D4759C /* ChangeSeatsTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		24C0419224E44F470088E4CB /* ChangeSeats */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 24C041BD24E44F4C0088E4CB /* Build configuration list for PBXNativeTarget "ChangeSeats" */;
@@ -176,24 +194,6 @@
 			productName = ChangeSeats;
 			productReference = 24C0419324E44F470088E4CB /* 席替え.app */;
 			productType = "com.apple.product-type.application";
-		};
-		24C041A824E44F4C0088E4CB /* ChangeSeatsTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 24C041C024E44F4C0088E4CB /* Build configuration list for PBXNativeTarget "ChangeSeatsTests" */;
-			buildPhases = (
-				24C041A524E44F4C0088E4CB /* Sources */,
-				24C041A624E44F4C0088E4CB /* Frameworks */,
-				24C041A724E44F4C0088E4CB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				24C041AB24E44F4C0088E4CB /* PBXTargetDependency */,
-			);
-			name = ChangeSeatsTests;
-			productName = ChangeSeatsTests;
-			productReference = 24C041A924E44F4C0088E4CB /* ChangeSeatsTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		24C041B324E44F4C0088E4CB /* ChangeSeatsUITests */ = {
 			isa = PBXNativeTarget;
@@ -219,16 +219,16 @@
 		24C0418B24E44F470088E4CB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1160;
+				LastSwiftUpdateCheck = 1170;
 				LastUpgradeCheck = 1160;
 				ORGANIZATIONNAME = "竹村凜";
 				TargetAttributes = {
+					2455B62A250DDBA600D4759C = {
+						CreatedOnToolsVersion = 11.7;
+						TestTargetID = 24C0419224E44F470088E4CB;
+					};
 					24C0419224E44F470088E4CB = {
 						CreatedOnToolsVersion = 11.6;
-					};
-					24C041A824E44F4C0088E4CB = {
-						CreatedOnToolsVersion = 11.6;
-						TestTargetID = 24C0419224E44F470088E4CB;
 					};
 					24C041B324E44F4C0088E4CB = {
 						CreatedOnToolsVersion = 11.6;
@@ -250,13 +250,20 @@
 			projectRoot = "";
 			targets = (
 				24C0419224E44F470088E4CB /* ChangeSeats */,
-				24C041A824E44F4C0088E4CB /* ChangeSeatsTests */,
 				24C041B324E44F4C0088E4CB /* ChangeSeatsUITests */,
+				2455B62A250DDBA600D4759C /* ChangeSeatsTest */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2455B629250DDBA600D4759C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		24C0419124E44F470088E4CB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -264,13 +271,6 @@
 				24C041A324E44F4B0088E4CB /* LaunchScreen.storyboard in Resources */,
 				24C041A024E44F4B0088E4CB /* Preview Assets.xcassets in Resources */,
 				24C0419D24E44F4B0088E4CB /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		24C041A724E44F4C0088E4CB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,28 +284,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2455B627250DDBA600D4759C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2455B62E250DDBA600D4759C /* ChangeSeatsTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		24C0418F24E44F470088E4CB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8DEE7BD1250D01760039B2A4 /* NumberPicker.swift in Sources */,
 				247AC36324F320D6004041C7 /* Result.swift in Sources */,
-				249C249124E58A16008EC2E1 /* RowsOfSeats.swift in Sources */,
+				249C249124E58A16008EC2E1 /* RowsOfSeatsView.swift in Sources */,
 				24C0419724E44F470088E4CB /* AppDelegate.swift in Sources */,
 				24C0419924E44F470088E4CB /* SceneDelegate.swift in Sources */,
-				24892F6624E90625002CCC98 /* SelectBoyOrGirl.swift in Sources */,
+				24892F6624E90625002CCC98 /* SelectBoyOrGirlView.swift in Sources */,
 				24C0419B24E44F470088E4CB /* ContentView.swift in Sources */,
 				2455B5F425031E3700D4759C /* Int.swift in Sources */,
 				24169F6224E663010096F381 /* SelectUnusedSeats.swift in Sources */,
 				247AC36124F320AA004041C7 /* ExplanationView.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		24C041A524E44F4C0088E4CB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				24C041AE24E44F4C0088E4CB /* ChangeSeatsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,10 +320,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		24C041AB24E44F4C0088E4CB /* PBXTargetDependency */ = {
+		2455B631250DDBA600D4759C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 24C0419224E44F470088E4CB /* ChangeSeats */;
-			targetProxy = 24C041AA24E44F4C0088E4CB /* PBXContainerItemProxy */;
+			targetProxy = 2455B630250DDBA600D4759C /* PBXContainerItemProxy */;
 		};
 		24C041B624E44F4C0088E4CB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -344,6 +344,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2455B633250DDBA600D4759C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P6K8M6RQ2W;
+				INFOPLIST_FILE = ChangeSeatsTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.r.t.astronomy.ChangeSeatsTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/席替え.app/席替え";
+			};
+			name = Debug;
+		};
+		2455B634250DDBA600D4759C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P6K8M6RQ2W;
+				INFOPLIST_FILE = ChangeSeatsTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.r.t.astronomy.ChangeSeatsTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/席替え.app/席替え";
+			};
+			name = Release;
+		};
 		24C041BB24E44F4C0088E4CB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -500,50 +542,6 @@
 			};
 			name = Release;
 		};
-		24C041C124E44F4C0088E4CB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P6K8M6RQ2W;
-				INFOPLIST_FILE = ChangeSeatsTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.r.t.astronomy.ChangeSeatsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChangeSeats.app/ChangeSeats";
-			};
-			name = Debug;
-		};
-		24C041C224E44F4C0088E4CB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P6K8M6RQ2W;
-				INFOPLIST_FILE = ChangeSeatsTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.r.t.astronomy.ChangeSeatsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChangeSeats.app/ChangeSeats";
-			};
-			name = Release;
-		};
 		24C041C424E44F4C0088E4CB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -587,6 +585,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2455B632250DDBA600D4759C /* Build configuration list for PBXNativeTarget "ChangeSeatsTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2455B633250DDBA600D4759C /* Debug */,
+				2455B634250DDBA600D4759C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		24C0418E24E44F470088E4CB /* Build configuration list for PBXProject "ChangeSeats" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -601,15 +608,6 @@
 			buildConfigurations = (
 				24C041BE24E44F4C0088E4CB /* Debug */,
 				24C041BF24E44F4C0088E4CB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		24C041C024E44F4C0088E4CB /* Build configuration list for PBXNativeTarget "ChangeSeatsTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				24C041C124E44F4C0088E4CB /* Debug */,
-				24C041C224E44F4C0088E4CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
