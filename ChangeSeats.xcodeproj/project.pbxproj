@@ -8,22 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		24169F6224E663010096F381 /* SelectUnusedSeatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24169F6124E663010096F381 /* SelectUnusedSeatsView.swift */; };
-		2455B5F425031E3700D4759C /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2455B5F325031E3700D4759C /* Int.swift */; };
-		2455B635250E365C00D4759C /* SelectBoyOrGirlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24892F6524E90625002CCC98 /* SelectBoyOrGirlView.swift */; };
-		2455B636250E365D00D4759C /* SelectBoyOrGirlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24892F6524E90625002CCC98 /* SelectBoyOrGirlView.swift */; };
-		2455B637250E366100D4759C /* SelectUnusedSeatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24169F6124E663010096F381 /* SelectUnusedSeatsView.swift */; };
-		2455B638250E366200D4759C /* SelectUnusedSeatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24169F6124E663010096F381 /* SelectUnusedSeatsView.swift */; };
-		2455B639250E366500D4759C /* RowsOfSeatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C249024E58A16008EC2E1 /* RowsOfSeatsView.swift */; };
-		2455B63A250E366600D4759C /* RowsOfSeatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C249024E58A16008EC2E1 /* RowsOfSeatsView.swift */; };
-		2455B63B250E366C00D4759C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C0419A24E44F470088E4CB /* ContentView.swift */; };
-		2455B63C250E366C00D4759C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C0419A24E44F470088E4CB /* ContentView.swift */; };
-		2455B63D250E367100D4759C /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247AC36224F320D6004041C7 /* Result.swift */; };
-		2455B63E250E367100D4759C /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247AC36224F320D6004041C7 /* Result.swift */; };
 		2455B642250E36A600D4759C /* ChangeSeatsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2455B62D250DDBA600D4759C /* ChangeSeatsTest.swift */; };
-		2455B643250E36DE00D4759C /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2455B5F325031E3700D4759C /* Int.swift */; };
-		2455B644250E36DF00D4759C /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2455B5F325031E3700D4759C /* Int.swift */; };
-		2455B645250E36E400D4759C /* NumberPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE7BD0250D01760039B2A4 /* NumberPicker.swift */; };
-		2455B646250E36E500D4759C /* NumberPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE7BD0250D01760039B2A4 /* NumberPicker.swift */; };
+		2455B648250E37AE00D4759C /* PresetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2455B647250E37AD00D4759C /* PresetView.swift */; };
+		2455B64A250E37CE00D4759C /* DetailPresetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2455B649250E37CE00D4759C /* DetailPresetView.swift */; };
+		2455B64B250F8CBA00D4759C /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2455B5F325031E3700D4759C /* Int.swift */; };
 		247AC36124F320AA004041C7 /* ExplanationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247AC36024F320AA004041C7 /* ExplanationView.swift */; };
 		247AC36324F320D6004041C7 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247AC36224F320D6004041C7 /* Result.swift */; };
 		24892F6624E90625002CCC98 /* SelectBoyOrGirlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24892F6524E90625002CCC98 /* SelectBoyOrGirlView.swift */; };
@@ -61,6 +49,8 @@
 		2455B62B250DDBA600D4759C /* ChangeSeatsTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChangeSeatsTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2455B62D250DDBA600D4759C /* ChangeSeatsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeSeatsTest.swift; sourceTree = "<group>"; };
 		2455B62F250DDBA600D4759C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2455B647250E37AD00D4759C /* PresetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetView.swift; sourceTree = "<group>"; };
+		2455B649250E37CE00D4759C /* DetailPresetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresetView.swift; sourceTree = "<group>"; };
 		247AC36024F320AA004041C7 /* ExplanationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplanationView.swift; sourceTree = "<group>"; };
 		247AC36224F320D6004041C7 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		24892F6524E90625002CCC98 /* SelectBoyOrGirlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBoyOrGirlView.swift; sourceTree = "<group>"; };
@@ -150,6 +140,8 @@
 				247AC36224F320D6004041C7 /* Result.swift */,
 				2455B5F325031E3700D4759C /* Int.swift */,
 				8DEE7BD0250D01760039B2A4 /* NumberPicker.swift */,
+				2455B647250E37AD00D4759C /* PresetView.swift */,
+				2455B649250E37CE00D4759C /* DetailPresetView.swift */,
 			);
 			path = ChangeSeats;
 			sourceTree = "<group>";
@@ -303,13 +295,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2455B642250E36A600D4759C /* ChangeSeatsTest.swift in Sources */,
-				2455B63E250E367100D4759C /* Result.swift in Sources */,
-				2455B638250E366200D4759C /* SelectUnusedSeatsView.swift in Sources */,
-				2455B644250E36DF00D4759C /* Int.swift in Sources */,
-				2455B646250E36E500D4759C /* NumberPicker.swift in Sources */,
-				2455B63C250E366C00D4759C /* ContentView.swift in Sources */,
-				2455B635250E365C00D4759C /* SelectBoyOrGirlView.swift in Sources */,
-				2455B63A250E366600D4759C /* RowsOfSeatsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,14 +304,16 @@
 			files = (
 				8DEE7BD1250D01760039B2A4 /* NumberPicker.swift in Sources */,
 				247AC36324F320D6004041C7 /* Result.swift in Sources */,
+				2455B64A250E37CE00D4759C /* DetailPresetView.swift in Sources */,
+				2455B64B250F8CBA00D4759C /* Int.swift in Sources */,
 				249C249124E58A16008EC2E1 /* RowsOfSeatsView.swift in Sources */,
 				24C0419724E44F470088E4CB /* AppDelegate.swift in Sources */,
 				24C0419924E44F470088E4CB /* SceneDelegate.swift in Sources */,
 				24892F6624E90625002CCC98 /* SelectBoyOrGirlView.swift in Sources */,
 				24C0419B24E44F470088E4CB /* ContentView.swift in Sources */,
-				2455B5F425031E3700D4759C /* Int.swift in Sources */,
 				24169F6224E663010096F381 /* SelectUnusedSeatsView.swift in Sources */,
 				247AC36124F320AA004041C7 /* ExplanationView.swift in Sources */,
+				2455B648250E37AE00D4759C /* PresetView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,14 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2455B63D250E367100D4759C /* Result.swift in Sources */,
-				2455B637250E366100D4759C /* SelectUnusedSeatsView.swift in Sources */,
-				2455B63B250E366C00D4759C /* ContentView.swift in Sources */,
-				2455B643250E36DE00D4759C /* Int.swift in Sources */,
-				2455B645250E36E400D4759C /* NumberPicker.swift in Sources */,
-				2455B636250E365D00D4759C /* SelectBoyOrGirlView.swift in Sources */,
 				24C041B924E44F4C0088E4CB /* ChangeSeatsUITests.swift in Sources */,
-				2455B639250E366500D4759C /* RowsOfSeatsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +355,7 @@
 		2455B633250DDBA600D4759C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P6K8M6RQ2W;
@@ -396,6 +377,7 @@
 		2455B634250DDBA600D4759C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P6K8M6RQ2W;

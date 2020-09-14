@@ -71,7 +71,7 @@ class SelectBoyOrGirlViewModel: ObservableObject {
 
 struct SelectBoyOrGirlView: View {
     @ObservedObject var viewModel: SelectBoyOrGirlViewModel
-    
+   
     init(columnSeats: [ColumnSeats], state: StudentState) {
         viewModel = SelectBoyOrGirlViewModel(columnSeats: columnSeats, state: state)
     }
@@ -129,7 +129,7 @@ struct SelectBoyOrGirlView: View {
                 Spacer()
                 
                 if viewModel.state.boysNumber == viewModel.countBoySeats() && viewModel.state.girlsNumber == viewModel.countgirlSeats(){
-                    NavigationLink(destination: ExplanationView(columnSeats: viewModel.columnSeats, state: viewModel.state)){
+                    NavigationLink(destination: PresetView(columnSeats: viewModel.columnSeats, state: viewModel.state)){
                         VStack{
                             Text("　")
                             Text("次へ")
