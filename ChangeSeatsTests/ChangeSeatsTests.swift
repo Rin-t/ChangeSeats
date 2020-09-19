@@ -20,6 +20,7 @@ class ChangeSeatsTests: XCTestCase {
     }
 
     func testExample() throws {
+        let view = ContentView()
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
