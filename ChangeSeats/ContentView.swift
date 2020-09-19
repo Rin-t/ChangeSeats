@@ -28,36 +28,8 @@ struct ContentView: View {
                         .font(.largeTitle)
                     Spacer()
                     HStack{
-                        
-                        
-//                        VStack {
-//                            Text("男子")
-//                                .font(.title)
-//                            Picker(selection: $boysNum, label: Text("")) {
-//                                ForEach(0..<MAZ_BOY_NUMBER) { index in
-//                                    Text(String(index))
-//                                }
-//                            }
-//                            .frame(width: 200)
-//                        }
-                        
                         NumberPicker(title: "男子", number: $boysNum)
-                        
-                        
-//                        VStack {
-//                            Text("女子")
-//                                .font(.title)
-//                            Picker(selection: $girlsNum, label: Text("")) {
-//                                ForEach(0..<MAX_GIRL_NUMBER) { index in
-//                                    Text(String(index))
-//                                }
-//                            }
-//                            .frame(width: 200)
-//                        }
-                        
                         NumberPicker(title: "女子", number: $girlsNum)
-
-                        
                     }
                     HStack {
                         Text("男子：\(boysNum)人")
@@ -71,7 +43,7 @@ struct ContentView: View {
                     Text("合計：\(boysNum + girlsNum)人")
                         .font(.title)
                     Spacer()
-                    NavigationLink(destination: RowsOfSeats(studentState: StudentState(boysNum: boysNum, girlsNum: girlsNum, total: boysNum + girlsNum))){
+                    NavigationLink(destination: RowsOfSeatsView(studentState: StudentState(boysNum: boysNum, girlsNum: girlsNum, total: boysNum + girlsNum))){
                         Text("次へ")
                             .foregroundColor(.white)
                             .font(.headline)

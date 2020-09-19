@@ -20,10 +20,48 @@ struct ColumnSeats: Identifiable, Hashable {
     var rowSeats: [Seat]
 }
 
+class SelectUnusedSeatsViewModel: ObservableObject {
+    @Published var columnSeats: [ColumnSeats]
+    @Published var state: StudentState
+    
+    init(columnSeats: [ColumnSeats], state: StudentState) {
+        self.columnSeats = columnSeats
+        self.state = state
+    }
+    
+    func change(uuid: UUID) {
+           for columnIndex in 0..<columnSeats.count {
+               for rowIndex in 0..<columnSeats[columnIndex].rowSeats.count {
+                   if columnSeats[columnIndex].rowSeats[rowIndex].id == uuid {
+                       columnSeats[columnIndex].rowSeats[rowIndex].isOn.toggle()
+                   }
+               }
+           }
+       }
+       
+       func countUsedSeats() -> Int {
+           var isUsedSeats: Int = 0
+           for i in 0...columnSeats.count - 1 {
+               for j in 0...columnSeats[i].rowSeats.count - 1 {
+                   if columnSeats[i].rowSeats[j].isOn {
+                       isUsedSeats += 1
+                   }
+               }
+           }
+           return isUsedSeats
+       }
+}
 
-struct SelectUnusedSeats: View {
-    let studentState: StudentState
-    @State var columnSeats: [ColumnSeats]
+
+struct SelectUnusedSeatsView: View {
+    //let studentState: StudentState
+    //@State var columnSeats: [ColumnSeats]
+    @ObservedObject var viewModel: SelectUnusedSeatsViewModel
+    
+    
+    init(columnSeats: [ColumnSeats], state: StudentState) {
+        viewModel = SelectUnusedSeatsViewModel(columnSeats: columnSeats, state: state)
+    }
     
     var body: some View {
         ZStack{
@@ -34,11 +72,11 @@ struct SelectUnusedSeats: View {
                 Text("使わない席を選択")
                     .font(.largeTitle)
                 Spacer()
-                ForEach(columnSeats) { column in
+                ForEach(viewModel.columnSeats) { column in
                     HStack {
                         ForEach(column.rowSeats, id: \.id) { row in
                             Button(action: {
-                                self.change(uuid: row.id)
+                                self.viewModel.change(uuid: row.id)
                             }){
                                 Image(systemName: row.isOn ? "o.square" :  "xmark.square")
                                     .foregroundColor(row.isOn ? .blue : .black)
@@ -62,18 +100,18 @@ struct SelectUnusedSeats: View {
                 }
                 
                 HStack{
-                    Text("合計人数：\(studentState.totalStudentNumber)人")
-                     .padding(.trailing, 15)
-                    Text("使用席数：\(countUsedSeats(seatsBool: columnSeats))席")
-                    .padding(.leading, 15)
+                    Text("合計人数：\(viewModel.state.totalStudentNumber)人")
+                        .padding(.trailing, 15)
+                    Text("使用席数：\(viewModel.countUsedSeats())席")
+                        .padding(.leading, 15)
                 }
                 .padding(.bottom, 15)
                 
                 Spacer()
-                if studentState.totalStudentNumber == countUsedSeats(seatsBool: columnSeats) {
+                if viewModel.state.totalStudentNumber == viewModel.countUsedSeats() {
                     VStack{
                         Text("　")
-                        NavigationLink(destination: SelectBoyOrGirl(state: studentState, columnSeats: columnSeats)){
+                        NavigationLink(destination: SelectBoyOrGirlView(columnSeats: viewModel.columnSeats, state: viewModel.state)){
                             Text("次へ")
                                 .foregroundColor(.white)
                                 .font(.headline)
@@ -101,28 +139,7 @@ struct SelectUnusedSeats: View {
         }
     }
     
-    func change(uuid: UUID) {
-        for columnIndex in 0..<columnSeats.count {
-            for rowIndex in 0..<columnSeats[columnIndex].rowSeats.count {
-                if columnSeats[columnIndex].rowSeats[rowIndex].id == uuid {
-                    columnSeats[columnIndex].rowSeats[rowIndex].isOn.toggle()
-                }
-            }
-        }
-    }
-    
-    func countUsedSeats(seatsBool:[ColumnSeats]) -> Int {
-        var isUsedSeats: Int = 0
-        for i in 0...seatsBool.count - 1 {
-            for j in 0...seatsBool[i].rowSeats.count - 1 {
-                if seatsBool[i].rowSeats[j].isOn {
-                    isUsedSeats += 1
-                }
-            }
-        }
-        
-        return isUsedSeats
-    }
+   
 }
 
 

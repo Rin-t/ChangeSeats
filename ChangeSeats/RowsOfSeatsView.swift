@@ -20,7 +20,11 @@ struct StudentState {
     }   
 }
 
-struct RowsOfSeats: View {
+
+
+
+
+struct RowsOfSeatsView: View {
     let studentState: StudentState
     @State var rows = 6
     @State var columns = 6
@@ -86,7 +90,7 @@ struct RowsOfSeats: View {
                 } else {
                     VStack{
                         Text("　")
-                        NavigationLink(destination: SelectUnusedSeats(studentState: studentState,columnSeats: createSeats(row: rows, column: columns))){
+                        NavigationLink(destination: SelectUnusedSeatsView(columnSeats: createSeats(row: rows, column: columns), state: studentState)){
                             Text("次へ")
                                 .foregroundColor(.white)
                                 .font(.headline)

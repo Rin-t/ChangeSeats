@@ -20,9 +20,59 @@ struct isBoyStatus: Identifiable, Hashable {
     var isBoy: Bool = true
 }
 
-struct SelectBoyOrGirl: View {
-    @State var state: StudentState
-    @State var columnSeats: [ColumnSeats]
+class SelectBoyOrGirlViewModel: ObservableObject {
+    @Published var columnSeats: [ColumnSeats]
+    @Published var state: StudentState
+    
+    init(columnSeats: [ColumnSeats], state: StudentState) {
+        self.columnSeats = columnSeats
+        self.state = state
+    }
+    
+    func change(uuid: UUID) {
+           for columnIndex in 0..<columnSeats.count {
+               for rowIndex in 0..<columnSeats[columnIndex].rowSeats.count {
+                   if columnSeats[columnIndex].rowSeats[rowIndex].id == uuid {
+                       columnSeats[columnIndex].rowSeats[rowIndex].isBoy.toggle()
+                   }
+               }
+           }
+       }
+       
+       func countBoySeats() -> Int {
+           var boySeats: Int = 0
+           for i in 0...columnSeats.count - 1 {
+               for j in 0...columnSeats[i].rowSeats.count - 1{
+                   if columnSeats[i].rowSeats[j].isOn {
+                       if columnSeats[i].rowSeats[j].isBoy {
+                           boySeats += 1
+                       }
+                   }
+               }
+           }
+        return boySeats
+       }
+    
+       func countgirlSeats() -> Int{
+           var girlSeats: Int = 0
+           for i in 0...columnSeats.count - 1 {
+               for j in 0...columnSeats[i].rowSeats.count - 1{
+                   if columnSeats[i].rowSeats[j].isBoy == false {
+                       girlSeats += 1
+                   }
+               }
+           }
+        return girlSeats
+       }
+}
+
+
+struct SelectBoyOrGirlView: View {
+    @ObservedObject var viewModel: SelectBoyOrGirlViewModel
+   
+    init(columnSeats: [ColumnSeats], state: StudentState) {
+        viewModel = SelectBoyOrGirlViewModel(columnSeats: columnSeats, state: state)
+    }
     
     var body: some View {
         ZStack{
@@ -37,20 +87,20 @@ struct SelectBoyOrGirl: View {
                 Spacer()
                 
                 HStack {
-                    Text("男子：\(state.boysNumber)席")
-                    Text("女子：\(state.girlsNumber)席")
+                    Text("男子：\(viewModel.state.boysNumber)席")
+                    Text("女子：\(viewModel.state.girlsNumber)席")
                     Text("にしてください")
                     
                 }
                 .padding(.bottom, 30)
                 
-                ForEach(columnSeats) { column in
+                ForEach(viewModel.columnSeats) { column in
                     HStack {
                         ForEach(column.rowSeats, id: \.id) { row in
                             Group{
                                 if row.isOn{
                                     Button(action: {
-                                        self.change(uuid: row.id)
+                                        self.viewModel.change(uuid: row.id)
                                     }){
                                         Image(systemName: "o.square")
                                             .foregroundColor(row.isBoy ? .blue : .red)
@@ -70,14 +120,14 @@ struct SelectBoyOrGirl: View {
                     .border(Color.black, width: 2)
                 
                 HStack{
-                    Text("青：男子\(countBoySeats(seatsBool: columnSeats))")
-                    Text("赤：女子\(countgirlSeats(seatsBool: columnSeats))")
+                    Text("青：男子\(viewModel.countBoySeats())")
+                    Text("赤：女子\(viewModel.countgirlSeats())")
                 }
                 .padding(.vertical, 10)
                 Spacer()
                 
-                if state.boysNumber == countBoySeats(seatsBool: columnSeats) && state.girlsNumber == countgirlSeats(seatsBool: columnSeats){
-                    NavigationLink(destination: ExplanationView(columnSeats: columnSeats, state: state)){
+                if viewModel.state.boysNumber == viewModel.countBoySeats() && viewModel.state.girlsNumber == viewModel.countgirlSeats(){
+                    NavigationLink(destination: PresetView(columnSeats: viewModel.columnSeats, state: viewModel.state)){
                         VStack{
                             Text("　")
                             Text("次へ")
@@ -106,40 +156,7 @@ struct SelectBoyOrGirl: View {
             }
         }
     }
-    func change(uuid: UUID) {
-        for columnIndex in 0..<columnSeats.count {
-            for rowIndex in 0..<columnSeats[columnIndex].rowSeats.count {
-                if columnSeats[columnIndex].rowSeats[rowIndex].id == uuid {
-                    columnSeats[columnIndex].rowSeats[rowIndex].isBoy.toggle()
-                }
-            }
-        }
-    }
-    
-    func countBoySeats(seatsBool: [ColumnSeats]) -> Int {
-        var boySeats: Int = 0
-        for i in 0...seatsBool.count - 1 {
-            for j in 0...seatsBool[i].rowSeats.count - 1{
-                if seatsBool[i].rowSeats[j].isOn {
-                    if seatsBool[i].rowSeats[j].isBoy {
-                        boySeats += 1
-                    }
-                }
-            }
-        }
-        return boySeats
-    }
-    func countgirlSeats(seatsBool: [ColumnSeats]) -> Int {
-        var girlSeats: Int = 0
-        for i in 0...seatsBool.count - 1 {
-            for j in 0...seatsBool[i].rowSeats.count - 1{
-                if seatsBool[i].rowSeats[j].isBoy == false {
-                    girlSeats += 1
-                }
-            }
-        }
-        return girlSeats
-    }
+   
 }
 
 
