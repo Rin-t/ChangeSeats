@@ -2,7 +2,7 @@
 //  ChangeSeatsTest.swift
 //  ChangeSeatsTest
 //
-//  Created by Rin on 2020/09/13.
+//  Created by Rin on 2020/09/19.
 //  Copyright © 2020 竹村凜. All rights reserved.
 //
 
@@ -19,7 +19,11 @@ class ChangeSeatsTest: XCTestCase {
     }
 
     func testExample() throws {
-        
+        var columnSeat: [ColumnSeats] = [ColumnSeats(id: UUID(), rowSeats: [Seat(id: UUID(), isOn: true, isBoy: true, number: nil),Seat(id: UUID, isOn: true, isBoy: true, number: nil),Seat(id: UUID, isOn: true, isBoy: true, number: nil),Seat(id: UUID, isOn: true, isBoy: true, number: nil),Seat(id: UUID, isOn: true, isBoy: true, number: nil)])]
+        var studentState: StudentState =  StudentState(boysNum: 5, girlsNum: 0, total: 5)
+        var viewModel = SelectBoyOrGirlViewModel(columnSeats: columnSeat, state: StudentState)
+
+        viewModel.change(uuid: UUID)
     }
 
     func testPerformanceExample() throws {

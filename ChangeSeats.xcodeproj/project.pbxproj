@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		24169F6224E663010096F381 /* SelectUnusedSeatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24169F6124E663010096F381 /* SelectUnusedSeatsView.swift */; };
-		2455B642250E36A600D4759C /* ChangeSeatsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2455B62D250DDBA600D4759C /* ChangeSeatsTest.swift */; };
+		2427B1272516429100B6DE7F /* ChangeSeatsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2427B1262516429100B6DE7F /* ChangeSeatsTest.swift */; };
+		2427B1312516429F00B6DE7F /* ChangeSeatsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2427B1262516429100B6DE7F /* ChangeSeatsTest.swift */; };
+		2427B135251642A400B6DE7F /* SelectBoyOrGirlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24892F6524E90625002CCC98 /* SelectBoyOrGirlView.swift */; };
 		2455B648250E37AE00D4759C /* PresetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2455B647250E37AD00D4759C /* PresetView.swift */; };
 		2455B64A250E37CE00D4759C /* DetailPresetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2455B649250E37CE00D4759C /* DetailPresetView.swift */; };
 		2455B64B250F8CBA00D4759C /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2455B5F325031E3700D4759C /* Int.swift */; };
@@ -27,7 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2455B630250DDBA600D4759C /* PBXContainerItemProxy */ = {
+		2427B1292516429200B6DE7F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 24C0418B24E44F470088E4CB /* Project object */;
 			proxyType = 1;
@@ -45,10 +47,10 @@
 
 /* Begin PBXFileReference section */
 		24169F6124E663010096F381 /* SelectUnusedSeatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectUnusedSeatsView.swift; sourceTree = "<group>"; };
+		2427B1242516429100B6DE7F /* ChangeSeatsTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChangeSeatsTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2427B1262516429100B6DE7F /* ChangeSeatsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeSeatsTest.swift; sourceTree = "<group>"; };
+		2427B1282516429200B6DE7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2455B5F325031E3700D4759C /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
-		2455B62B250DDBA600D4759C /* ChangeSeatsTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChangeSeatsTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2455B62D250DDBA600D4759C /* ChangeSeatsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeSeatsTest.swift; sourceTree = "<group>"; };
-		2455B62F250DDBA600D4759C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2455B647250E37AD00D4759C /* PresetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetView.swift; sourceTree = "<group>"; };
 		2455B649250E37CE00D4759C /* DetailPresetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresetView.swift; sourceTree = "<group>"; };
 		247AC36024F320AA004041C7 /* ExplanationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplanationView.swift; sourceTree = "<group>"; };
@@ -70,7 +72,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2455B628250DDBA600D4759C /* Frameworks */ = {
+		2427B1212516429100B6DE7F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -94,11 +96,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2455B62C250DDBA600D4759C /* ChangeSeatsTest */ = {
+		2427B1252516429100B6DE7F /* ChangeSeatsTest */ = {
 			isa = PBXGroup;
 			children = (
-				2455B62D250DDBA600D4759C /* ChangeSeatsTest.swift */,
-				2455B62F250DDBA600D4759C /* Info.plist */,
+				2427B1262516429100B6DE7F /* ChangeSeatsTest.swift */,
+				2427B1282516429200B6DE7F /* Info.plist */,
 			);
 			path = ChangeSeatsTest;
 			sourceTree = "<group>";
@@ -108,7 +110,7 @@
 			children = (
 				24C0419524E44F470088E4CB /* ChangeSeats */,
 				24C041B724E44F4C0088E4CB /* ChangeSeatsUITests */,
-				2455B62C250DDBA600D4759C /* ChangeSeatsTest */,
+				2427B1252516429100B6DE7F /* ChangeSeatsTest */,
 				24C0419424E44F470088E4CB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -118,7 +120,7 @@
 			children = (
 				24C0419324E44F470088E4CB /* 席替え.app */,
 				24C041B424E44F4C0088E4CB /* ChangeSeatsUITests.xctest */,
-				2455B62B250DDBA600D4759C /* ChangeSeatsTest.xctest */,
+				2427B1242516429100B6DE7F /* ChangeSeatsTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -166,22 +168,22 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2455B62A250DDBA600D4759C /* ChangeSeatsTest */ = {
+		2427B1232516429100B6DE7F /* ChangeSeatsTest */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2455B632250DDBA600D4759C /* Build configuration list for PBXNativeTarget "ChangeSeatsTest" */;
+			buildConfigurationList = 2427B12B2516429200B6DE7F /* Build configuration list for PBXNativeTarget "ChangeSeatsTest" */;
 			buildPhases = (
-				2455B627250DDBA600D4759C /* Sources */,
-				2455B628250DDBA600D4759C /* Frameworks */,
-				2455B629250DDBA600D4759C /* Resources */,
+				2427B1202516429100B6DE7F /* Sources */,
+				2427B1212516429100B6DE7F /* Frameworks */,
+				2427B1222516429100B6DE7F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2455B631250DDBA600D4759C /* PBXTargetDependency */,
+				2427B12A2516429200B6DE7F /* PBXTargetDependency */,
 			);
 			name = ChangeSeatsTest;
 			productName = ChangeSeatsTest;
-			productReference = 2455B62B250DDBA600D4759C /* ChangeSeatsTest.xctest */;
+			productReference = 2427B1242516429100B6DE7F /* ChangeSeatsTest.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		24C0419224E44F470088E4CB /* ChangeSeats */ = {
@@ -225,12 +227,12 @@
 		24C0418B24E44F470088E4CB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1170;
+				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1160;
 				ORGANIZATIONNAME = "竹村凜";
 				TargetAttributes = {
-					2455B62A250DDBA600D4759C = {
-						CreatedOnToolsVersion = 11.7;
+					2427B1232516429100B6DE7F = {
+						CreatedOnToolsVersion = 12.0;
 						TestTargetID = 24C0419224E44F470088E4CB;
 					};
 					24C0419224E44F470088E4CB = {
@@ -257,13 +259,13 @@
 			targets = (
 				24C0419224E44F470088E4CB /* ChangeSeats */,
 				24C041B324E44F4C0088E4CB /* ChangeSeatsUITests */,
-				2455B62A250DDBA600D4759C /* ChangeSeatsTest */,
+				2427B1232516429100B6DE7F /* ChangeSeatsTest */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2455B629250DDBA600D4759C /* Resources */ = {
+		2427B1222516429100B6DE7F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -290,11 +292,12 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2455B627250DDBA600D4759C /* Sources */ = {
+		2427B1202516429100B6DE7F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2455B642250E36A600D4759C /* ChangeSeatsTest.swift in Sources */,
+				2427B135251642A400B6DE7F /* SelectBoyOrGirlView.swift in Sources */,
+				2427B1272516429100B6DE7F /* ChangeSeatsTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +314,7 @@
 				24C0419924E44F470088E4CB /* SceneDelegate.swift in Sources */,
 				24892F6624E90625002CCC98 /* SelectBoyOrGirlView.swift in Sources */,
 				24C0419B24E44F470088E4CB /* ContentView.swift in Sources */,
+				2427B1312516429F00B6DE7F /* ChangeSeatsTest.swift in Sources */,
 				24169F6224E663010096F381 /* SelectUnusedSeatsView.swift in Sources */,
 				247AC36124F320AA004041C7 /* ExplanationView.swift in Sources */,
 				2455B648250E37AE00D4759C /* PresetView.swift in Sources */,
@@ -328,10 +332,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2455B631250DDBA600D4759C /* PBXTargetDependency */ = {
+		2427B12A2516429200B6DE7F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 24C0419224E44F470088E4CB /* ChangeSeats */;
-			targetProxy = 2455B630250DDBA600D4759C /* PBXContainerItemProxy */;
+			targetProxy = 2427B1292516429200B6DE7F /* PBXContainerItemProxy */;
 		};
 		24C041B624E44F4C0088E4CB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -352,15 +356,15 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		2455B633250DDBA600D4759C /* Debug */ = {
+		2427B12C2516429200B6DE7F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P6K8M6RQ2W;
 				INFOPLIST_FILE = ChangeSeatsTest/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -374,15 +378,15 @@
 			};
 			name = Debug;
 		};
-		2455B634250DDBA600D4759C /* Release */ = {
+		2427B12D2516429200B6DE7F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P6K8M6RQ2W;
 				INFOPLIST_FILE = ChangeSeatsTest/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -595,11 +599,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2455B632250DDBA600D4759C /* Build configuration list for PBXNativeTarget "ChangeSeatsTest" */ = {
+		2427B12B2516429200B6DE7F /* Build configuration list for PBXNativeTarget "ChangeSeatsTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2455B633250DDBA600D4759C /* Debug */,
-				2455B634250DDBA600D4759C /* Release */,
+				2427B12C2516429200B6DE7F /* Debug */,
+				2427B12D2516429200B6DE7F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
