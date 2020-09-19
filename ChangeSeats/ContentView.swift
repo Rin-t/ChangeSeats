@@ -14,8 +14,8 @@ struct ContentView: View {
     //最初にPickerに表示する人数
     @State var boysNum: Int = 15
     @State var girlsNum: Int = 15
-    let MaxBoyNumber = 26
-    let MaxGirlNumber = 26
+    let MAZ_BOY_NUMBER = 26
+    let MAX_GIRL_NUMBER = 26
     
     var body: some View {
         NavigationView{
@@ -28,26 +28,36 @@ struct ContentView: View {
                         .font(.largeTitle)
                     Spacer()
                     HStack{
-                        VStack {
-                            Text("男子")
-                                .font(.title)
-                            Picker(selection: $boysNum, label: Text("")) {
-                                ForEach(0..<MaxBoyNumber) { index in
-                                    Text(String(index))
-                                }
-                            }
-                            .frame(width: 200)
-                        }
-                        VStack {
-                            Text("女子")
-                                .font(.title)
-                            Picker(selection: $girlsNum, label: Text("")) {
-                                ForEach(0..<MaxGirlNumber) { index in
-                                    Text(String(index))
-                                }
-                            }
-                            .frame(width: 200)
-                        }
+                        
+                        
+//                        VStack {
+//                            Text("男子")
+//                                .font(.title)
+//                            Picker(selection: $boysNum, label: Text("")) {
+//                                ForEach(0..<MAZ_BOY_NUMBER) { index in
+//                                    Text(String(index))
+//                                }
+//                            }
+//                            .frame(width: 200)
+//                        }
+                        
+                        NumberPicker(title: "男子", number: $boysNum)
+                        
+                        
+//                        VStack {
+//                            Text("女子")
+//                                .font(.title)
+//                            Picker(selection: $girlsNum, label: Text("")) {
+//                                ForEach(0..<MAX_GIRL_NUMBER) { index in
+//                                    Text(String(index))
+//                                }
+//                            }
+//                            .frame(width: 200)
+//                        }
+                        
+                        NumberPicker(title: "女子", number: $girlsNum)
+
+                        
                     }
                     HStack {
                         Text("男子：\(boysNum)人")
@@ -66,9 +76,8 @@ struct ContentView: View {
                             .foregroundColor(.white)
                             .font(.headline)
                             .frame(width: 140, height: 50)
-                            .background(Capsule()
-                                .foregroundColor(.blue)
-                                .frame(width: 140, height: 50))
+                            .background(Color.blue)
+                            .cornerRadius(25)
                             .overlay(Capsule().stroke(Color.white, lineWidth: 2))
                     }
                     Spacer()

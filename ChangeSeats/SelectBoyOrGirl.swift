@@ -77,7 +77,7 @@ struct SelectBoyOrGirl: View {
                 Spacer()
                 
                 if state.boysNumber == countBoySeats(seatsBool: columnSeats) && state.girlsNumber == countgirlSeats(seatsBool: columnSeats){
-                    NavigationLink(destination: Explanation(columnSeats: columnSeats, state: state)){
+                    NavigationLink(destination: ExplanationView(columnSeats: columnSeats, state: state)){
                         VStack{
                             Text("　")
                             Text("次へ")

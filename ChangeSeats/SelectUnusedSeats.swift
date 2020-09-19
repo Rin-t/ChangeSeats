@@ -59,7 +59,6 @@ struct SelectUnusedSeats: View {
                         .padding(.trailing, 15)
                     Image(systemName: "xmark.square")
                     Text("：使用しない席")
-                        
                 }
                 
                 HStack{
@@ -89,7 +88,7 @@ struct SelectUnusedSeats: View {
                     Text("席の数と人数が一致していません")
                         .foregroundColor(.red)
                     Text("次へ")
-                        .foregroundColor(.white)      .foregroundColor(.white)
+                        .foregroundColor(.white)
                         .font(.headline)
                         .frame(width: 140, height: 50)
                         .background(Capsule()
@@ -101,6 +100,7 @@ struct SelectUnusedSeats: View {
             }
         }
     }
+    
     func change(uuid: UUID) {
         for columnIndex in 0..<columnSeats.count {
             for rowIndex in 0..<columnSeats[columnIndex].rowSeats.count {
@@ -110,10 +110,11 @@ struct SelectUnusedSeats: View {
             }
         }
     }
+    
     func countUsedSeats(seatsBool:[ColumnSeats]) -> Int {
         var isUsedSeats: Int = 0
         for i in 0...seatsBool.count - 1 {
-            for j in 0...seatsBool[i].rowSeats.count - 1{
+            for j in 0...seatsBool[i].rowSeats.count - 1 {
                 if seatsBool[i].rowSeats[j].isOn {
                     isUsedSeats += 1
                 }

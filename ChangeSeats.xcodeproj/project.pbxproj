@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		24169F6224E663010096F381 /* SelectUnusedSeats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24169F6124E663010096F381 /* SelectUnusedSeats.swift */; };
 		2455B5F425031E3700D4759C /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2455B5F325031E3700D4759C /* Int.swift */; };
-		247AC36124F320AA004041C7 /* Explanation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247AC36024F320AA004041C7 /* Explanation.swift */; };
+		247AC36124F320AA004041C7 /* ExplanationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247AC36024F320AA004041C7 /* ExplanationView.swift */; };
 		247AC36324F320D6004041C7 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247AC36224F320D6004041C7 /* Result.swift */; };
 		24892F6624E90625002CCC98 /* SelectBoyOrGirl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24892F6524E90625002CCC98 /* SelectBoyOrGirl.swift */; };
 		249C249124E58A16008EC2E1 /* RowsOfSeats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C249024E58A16008EC2E1 /* RowsOfSeats.swift */; };
@@ -21,6 +21,7 @@
 		24C041A324E44F4B0088E4CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24C041A124E44F4B0088E4CB /* LaunchScreen.storyboard */; };
 		24C041AE24E44F4C0088E4CB /* ChangeSeatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C041AD24E44F4C0088E4CB /* ChangeSeatsTests.swift */; };
 		24C041B924E44F4C0088E4CB /* ChangeSeatsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C041B824E44F4C0088E4CB /* ChangeSeatsUITests.swift */; };
+		8DEE7BD1250D01760039B2A4 /* NumberPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE7BD0250D01760039B2A4 /* NumberPicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +44,7 @@
 /* Begin PBXFileReference section */
 		24169F6124E663010096F381 /* SelectUnusedSeats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectUnusedSeats.swift; sourceTree = "<group>"; };
 		2455B5F325031E3700D4759C /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
-		247AC36024F320AA004041C7 /* Explanation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Explanation.swift; sourceTree = "<group>"; };
+		247AC36024F320AA004041C7 /* ExplanationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplanationView.swift; sourceTree = "<group>"; };
 		247AC36224F320D6004041C7 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		24892F6524E90625002CCC98 /* SelectBoyOrGirl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBoyOrGirl.swift; sourceTree = "<group>"; };
 		249C249024E58A16008EC2E1 /* RowsOfSeats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowsOfSeats.swift; sourceTree = "<group>"; };
@@ -61,6 +62,7 @@
 		24C041B424E44F4C0088E4CB /* ChangeSeatsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChangeSeatsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		24C041B824E44F4C0088E4CB /* ChangeSeatsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeSeatsUITests.swift; sourceTree = "<group>"; };
 		24C041BA24E44F4C0088E4CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DEE7BD0250D01760039B2A4 /* NumberPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,9 +123,10 @@
 				249C249024E58A16008EC2E1 /* RowsOfSeats.swift */,
 				24169F6124E663010096F381 /* SelectUnusedSeats.swift */,
 				24892F6524E90625002CCC98 /* SelectBoyOrGirl.swift */,
-				247AC36024F320AA004041C7 /* Explanation.swift */,
+				247AC36024F320AA004041C7 /* ExplanationView.swift */,
 				247AC36224F320D6004041C7 /* Result.swift */,
 				2455B5F325031E3700D4759C /* Int.swift */,
+				8DEE7BD0250D01760039B2A4 /* NumberPicker.swift */,
 			);
 			path = ChangeSeats;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DEE7BD1250D01760039B2A4 /* NumberPicker.swift in Sources */,
 				247AC36324F320D6004041C7 /* Result.swift in Sources */,
 				249C249124E58A16008EC2E1 /* RowsOfSeats.swift in Sources */,
 				24C0419724E44F470088E4CB /* AppDelegate.swift in Sources */,
@@ -293,7 +297,7 @@
 				24C0419B24E44F470088E4CB /* ContentView.swift in Sources */,
 				2455B5F425031E3700D4759C /* Int.swift in Sources */,
 				24169F6224E663010096F381 /* SelectUnusedSeats.swift in Sources */,
-				247AC36124F320AA004041C7 /* Explanation.swift in Sources */,
+				247AC36124F320AA004041C7 /* ExplanationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
