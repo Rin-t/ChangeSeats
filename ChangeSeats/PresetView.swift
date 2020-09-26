@@ -12,9 +12,20 @@ class PresetViewModel: ObservableObject {
     @Published var columnSeats: [ColumnSeats]
     @Published var state: StudentState
     
+    @Published var showingBoyModal: Bool = false
+    @Published var showingGirlModal = false
+    
     init(columnSeats: [ColumnSeats], state: StudentState) {
         self.columnSeats = columnSeats
         self.state = state
+    }
+    
+    func boySeatTapped(id: UUID) {
+        showingBoyModal = true
+    }
+    
+    func girlSeatTapped(id: UUID) {
+        showingGirlModal = true
     }
     
     func change(uuid: UUID, number: Int) {
@@ -40,9 +51,6 @@ class PresetNumber: ObservableObject {
 struct PresetView: View {
     
     @ObservedObject var viewModel: PresetViewModel
-    @State var showingModal: Bool = false
-    @State var showingGirlModal = false
-    @State var passId = UUID()
     
     init(columnSeats: [ColumnSeats], state: StudentState) {
         viewModel = PresetViewModel(columnSeats: columnSeats, state: state)
@@ -62,29 +70,27 @@ struct PresetView: View {
                             if row.isOn {
                                 if row.isBoy {
                                     Button(action: {
-                                        self.showingModal = true
-                                        self.passId = row.id
                                         print("boy")
-                                        print(row.id)
+                                        self.viewModel.boySeatTapped(id: row.id)
                                     }){
                                         Image(systemName: "o.square")
                                             .foregroundColor(.blue)
                                             .font(.system(size: 40))
                                     }
-                                    .sheet(isPresented: self.$showingModal){
+                                    .sheet(isPresented: self.$viewModel.showingBoyModal){
                                         DetailPresetView(rowId: row.id, viewModel: viewModel, studentNumber: viewModel.state.boysNumber)
                                     }
                                     
                                 } else {
                                     Button(action: {
-                                        self.showingGirlModal = true
                                         print("girl")
+                                        self.viewModel.girlSeatTapped(id: row.id)
                                     }){
                                         Image(systemName: "o.square")
                                             .foregroundColor(.red)
                                             .font(.system(size: 40))
                                     }
-                                    .sheet(isPresented: self.$showingGirlModal){
+                                    .sheet(isPresented: self.$viewModel.showingGirlModal){
                                         DetailPresetView(rowId: row.id, viewModel: viewModel, studentNumber: viewModel.state.girlsNumber)
                                     }
                                 }
