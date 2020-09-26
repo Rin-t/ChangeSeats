@@ -15,10 +15,10 @@ enum SeatStatus {
     case girlUse
 }
 
-struct isBoyStatus: Identifiable, Hashable {
-    var id = UUID()
-    var isBoy: Bool = true
-}
+//struct isBoyStatus: Identifiable, Hashable {
+//    var id = UUID()
+//    var isBoy: Bool = true
+//}
 
 class SelectBoyOrGirlViewModel: ObservableObject {
     @Published var columnSeats: [ColumnSeats]

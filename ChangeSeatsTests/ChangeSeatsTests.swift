@@ -20,9 +20,25 @@ class ChangeSeatsTests: XCTestCase {
     }
 
     func testExample() throws {
-        let view = ContentView()
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let uuid = UUID()
+        let columnSeat: [ColumnSeats] = [ColumnSeats(id: UUID(), rowSeats: [Seat(id: uuid, isOn: true, isBoy: true, number: nil),Seat(id: UUID(), isOn: true, isBoy: true, number: nil),Seat(id: UUID(), isOn: true, isBoy: true, number: nil),Seat(id: UUID(), isOn: true, isBoy: true, number: nil),Seat(id: UUID(), isOn: true, isBoy: true, number: nil)])]
+        let studentState: StudentState =  StudentState(boysNum: 5, girlsNum: 0, total: 5)
+        let viewModel = SelectBoyOrGirlViewModel(columnSeats: columnSeat, state: studentState)
+
+        viewModel.change(uuid: uuid)
+        
+        var counter = 0
+        
+        for columnSeat in viewModel.columnSeats {
+            for rowSeat in columnSeat.rowSeats {
+                if rowSeat.isBoy == true {
+                    counter += 1
+                }
+            }
+        }
+        
+        XCTAssertEqual(4, counter)
+
     }
 
     func testPerformanceExample() throws {

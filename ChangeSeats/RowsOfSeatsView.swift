@@ -44,7 +44,7 @@ struct RowsOfSeatsView: View {
                         Text("タテ")
                             .font(.title)
                         Picker(selection: $columns, label: Text("")) {
-                            ForEach(1..<MaxRowsNumber, id: \.self) { index in
+                            ForEach(1..<MaxColumnsNumber, id: \.self) { index in
                                 Text(String(index))
                             }
                         }
@@ -61,6 +61,9 @@ struct RowsOfSeatsView: View {
                             }
                         }
                         .frame(width: 200)
+                        .pickerStyle(WheelPickerStyle())
+                        .onReceive([self.MaxRowsNumber].publisher.first()) { (value) in }
+                        .labelsHidden()
                     }
                 }
                 
