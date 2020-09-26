@@ -20,37 +20,37 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         
         // Create the SwiftUI view that provides the window contents.
-        // let contentView = ContentView()
+         let contentView = ContentView()
         
-        let columnSeats: [ColumnSeats] = [
-            ColumnSeats(
-                rowSeats: [
-                    Seat(id: UUID(), isOn: true, isBoy: true, number: nil),
-                    Seat(id: UUID(), isOn: true, isBoy: true, number: nil)
-                ]
-            ),
-            ColumnSeats(
-                rowSeats: [
-                    Seat(id: UUID(), isOn: true, isBoy: false, number: nil),
-                    Seat(id: UUID(), isOn: true, isBoy: false, number: nil)
-                ]
-            ),
-            ColumnSeats(
-                rowSeats: [
-                    Seat(id: UUID(), isOn: true, isBoy: false, number: nil),
-                    Seat(id: UUID(), isOn: true, isBoy: false, number: nil)
-                ]
-            ),
-            ColumnSeats(
-                rowSeats: [
-                    Seat(id: UUID(), isOn: false, isBoy: true, number: nil),
-                    Seat(id: UUID(), isOn: false, isBoy: true, number: nil)
-                ]
-            )
-        ]
-        let state: StudentState = StudentState(boysNum: 2, girlsNum: 4, total: 6)
-        
-        let contentView = PresetView(columnSeats: columnSeats, state: state)
+//        let columnSeats: [ColumnSeats] = [
+//            ColumnSeats(
+//                rowSeats: [
+//                    Seat(id: UUID(), isOn: true, isBoy: true, number: nil),
+//                    Seat(id: UUID(), isOn: true, isBoy: true, number: nil)
+//                ]
+//            ),
+//            ColumnSeats(
+//                rowSeats: [
+//                    Seat(id: UUID(), isOn: true, isBoy: false, number: nil),
+//                    Seat(id: UUID(), isOn: true, isBoy: false, number: nil)
+//                ]
+//            ),
+//            ColumnSeats(
+//                rowSeats: [
+//                    Seat(id: UUID(), isOn: true, isBoy: false, number: nil),
+//                    Seat(id: UUID(), isOn: true, isBoy: false, number: nil)
+//                ]
+//            ),
+//            ColumnSeats(
+//                rowSeats: [
+//                    Seat(id: UUID(), isOn: false, isBoy: true, number: nil),
+//                    Seat(id: UUID(), isOn: false, isBoy: true, number: nil)
+//                ]
+//            )
+//        ]
+//        let state: StudentState = StudentState(boysNum: 2, girlsNum: 4, total: 6)
+//
+//        let contentView = PresetView(columnSeats: columnSeats, state: state)
         
         
         // Use a UIHostingController as window root view controller.

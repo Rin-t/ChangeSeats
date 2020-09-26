@@ -33,11 +33,19 @@ import SwiftUI
 
 
 struct DetailPresetView: View {
-    @State var rowId: UUID
-    @ObservedObject var viewModel: PresetViewModel
-    @State var number: Int = 1
-    var studentNumber: Int
+    let columnAndRow: (Int, Int)
+    let studentNumber: Int
+    @Binding var columnSeats: [ColumnSeats]
+    @State var number = 1
     
+    var column: Int {
+        columnAndRow.0
+    }
+    
+    var row: Int {
+        columnAndRow.1
+    }
+
     var body: some View {
         VStack{
             Text("この席に座る人の番号を選択")
@@ -50,13 +58,11 @@ struct DetailPresetView: View {
         }
         .onAppear{
             print("modal")
-            print(self.rowId)
             print("StudentNumber")
             print(studentNumber)
         }
-        .onDisappear{
-            self.viewModel.change(uuid: self.rowId, number: self.number)
-            print("a")
+        .onDisappear{            
+            columnSeats[column].rowSeats[row].number = number
         }
     }
 }
