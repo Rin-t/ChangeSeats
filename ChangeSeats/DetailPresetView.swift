@@ -51,6 +51,8 @@ struct DetailPresetView: View {
         .onAppear{
             print("modal")
             print(self.rowId)
+            print("StudentNumber")
+            print(studentNumber)
         }
         .onDisappear{
             self.viewModel.change(uuid: self.rowId, number: self.number)

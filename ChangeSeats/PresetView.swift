@@ -40,8 +40,9 @@ class PresetNumber: ObservableObject {
 struct PresetView: View {
     
     @ObservedObject var viewModel: PresetViewModel
-    @State var isModal: Bool = false
-    @State var passId: UUID = UUID()
+    @State var showingModal: Bool = false
+    @State var showingGirlModal = false
+    @State var passId = UUID()
     
     init(columnSeats: [ColumnSeats], state: StudentState) {
         viewModel = PresetViewModel(columnSeats: columnSeats, state: state)
@@ -57,30 +58,34 @@ struct PresetView: View {
                             if row.number != nil{
                                 Image(systemName: "\(row.number!).square")
                                     .font(.system(size: 40))
-                            } else if row.isOn {
+                            } else
+                            if row.isOn {
                                 if row.isBoy {
                                     Button(action: {
-                                        self.isModal = true
+                                        self.showingModal = true
+                                        self.passId = row.id
+                                        print("boy")
                                         print(row.id)
                                     }){
                                         Image(systemName: "o.square")
                                             .foregroundColor(.blue)
                                             .font(.system(size: 40))
                                     }
-                                    .sheet(isPresented: self.$isModal){
-                                        DetailPresetView(rowId: row.id, viewModel: viewModel,studentNumber: viewModel.state.boysNumber)
+                                    .sheet(isPresented: self.$showingModal){
+                                        DetailPresetView(rowId: row.id, viewModel: viewModel, studentNumber: viewModel.state.boysNumber)
                                     }
                                     
                                 } else {
                                     Button(action: {
-                                        self.isModal = true
+                                        self.showingGirlModal = true
+                                        print("girl")
                                     }){
                                         Image(systemName: "o.square")
                                             .foregroundColor(.red)
                                             .font(.system(size: 40))
                                     }
-                                    .sheet(isPresented: self.$isModal){
-                                        DetailPresetView(rowId: row.id, viewModel: viewModel,studentNumber: viewModel.state.girlsNumber)
+                                    .sheet(isPresented: self.$showingGirlModal){
+                                        DetailPresetView(rowId: row.id, viewModel: viewModel, studentNumber: viewModel.state.girlsNumber)
                                     }
                                 }
                             } else {
