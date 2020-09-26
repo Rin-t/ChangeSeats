@@ -11,6 +11,8 @@ import SwiftUI
 class PresetViewModel: ObservableObject {
     @Published var columnSeats: [ColumnSeats]
     @Published var state: StudentState
+    @Published var passId = UUID()
+    
     
     init(columnSeats: [ColumnSeats], state: StudentState) {
         self.columnSeats = columnSeats
@@ -32,18 +34,14 @@ class PresetViewModel: ObservableObject {
     
 }
 
-class PresetNumber: ObservableObject {
-    @Published var number: Int = 1
-}
-
 
 struct PresetView: View {
     
     @ObservedObject var viewModel: PresetViewModel
     @State var showingModal: Bool = false
     @State var showingGirlModal = false
-    @State var passId = UUID()
     
+
     init(columnSeats: [ColumnSeats], state: StudentState) {
         viewModel = PresetViewModel(columnSeats: columnSeats, state: state)
     }
@@ -63,7 +61,7 @@ struct PresetView: View {
                                 if row.isBoy {
                                     Button(action: {
                                         self.showingModal = true
-                                        self.passId = row.id
+                                        self.viewModel.passId = row.id
                                         print("boy")
                                         print(row.id)
                                     }){
@@ -72,7 +70,8 @@ struct PresetView: View {
                                             .font(.system(size: 40))
                                     }
                                     .sheet(isPresented: self.$showingModal){
-                                        DetailPresetView(rowId: row.id, viewModel: viewModel, studentNumber: viewModel.state.boysNumber)
+                                        
+                                        DetailPresetView(columnSeats: viewModel.columnSeats, rowId: row.id, studentNumber: viewModel.state.boysNumber)
                                     }
                                     
                                 } else {
@@ -85,7 +84,7 @@ struct PresetView: View {
                                             .font(.system(size: 40))
                                     }
                                     .sheet(isPresented: self.$showingGirlModal){
-                                        DetailPresetView(rowId: row.id, viewModel: viewModel, studentNumber: viewModel.state.girlsNumber)
+                                        // DetailPresetView(rowId: row.id, columnSeat: viewModel.columnSeats, studentNumber: viewModel.state.girlsNumber)
                                     }
                                 }
                             } else {
