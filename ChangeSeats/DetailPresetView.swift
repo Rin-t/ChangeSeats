@@ -36,7 +36,7 @@ struct DetailPresetView: View {
     let columnAndRow: (Int, Int)
     let studentNumber: Int
     @Binding var columnSeats: [ColumnSeats]
-    @State var number = 1
+    @State var number = 0
     
     var column: Int {
         columnAndRow.0
@@ -49,20 +49,21 @@ struct DetailPresetView: View {
     var body: some View {
         VStack{
             Text("この席に座る人の番号を選択")
+                .font(.title)
             Picker(selection: $number, label: Text("")) {
+                Text("選択しない")
                 ForEach(1..<studentNumber + 1, id: \.self) { index in
                     Text(String(index))
                 }
             }
             .frame(width: 200)
         }
-        .onAppear{
-            print("modal")
-            print("StudentNumber")
-            print(studentNumber)
-        }
-        .onDisappear{            
-            columnSeats[column].rowSeats[row].number = number
+        .onDisappear{
+            if number == 0 {
+                columnSeats[column].rowSeats[row].number = nil
+            } else {
+                columnSeats[column].rowSeats[row].number = number
+            }
         }
     }
 }

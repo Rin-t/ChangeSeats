@@ -70,7 +70,7 @@ struct SelectUnusedSeatsView: View {
             
             VStack{
                 Text("使わない席を選択")
-                    .font(.largeTitle)
+                    .font(.title)
                 Spacer()
                 ForEach(viewModel.columnSeats) { column in
                     HStack {

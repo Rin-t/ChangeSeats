@@ -80,15 +80,15 @@ struct SelectBoyOrGirlView: View {
                 .edgesIgnoringSafeArea(.all)
             
             VStack {
-                Text("男女の座る席を選択")
-                    .font(.largeTitle)
+                Text("座る席を選択")
+                    .font(.title)
                     .padding(.bottom, 10)
                 
                 Spacer()
                 
                 HStack {
-                    Text("男子：\(viewModel.state.boysNumber)席")
-                    Text("女子：\(viewModel.state.girlsNumber)席")
+                    Text("A：\(viewModel.state.boysNumber)席")
+                    Text("B：\(viewModel.state.girlsNumber)席")
                     Text("にしてください")
                     
                 }
@@ -118,12 +118,14 @@ struct SelectBoyOrGirlView: View {
                     .padding(.horizontal, 20)
                     .padding(.vertical, 5)
                     .border(Color.black, width: 2)
+                Text("選択中")
+                    .padding(.top, 10)
                 
                 HStack{
-                    Text("青：男子\(viewModel.countBoySeats())")
-                    Text("赤：女子\(viewModel.countgirlSeats())")
+                    Text("青：A \(viewModel.countBoySeats())席")
+                    Text("赤：B \(viewModel.countgirlSeats())席")
                 }
-                .padding(.vertical, 10)
+                .padding(.bottom, 10)
                 Spacer()
                 
                 if viewModel.state.boysNumber == viewModel.countBoySeats() && viewModel.state.girlsNumber == viewModel.countgirlSeats(){
@@ -147,9 +149,8 @@ struct SelectBoyOrGirlView: View {
                         .foregroundColor(.white)
                         .font(.headline)
                         .frame(width: 140, height: 50)
-                        .background(Capsule()
-                            .foregroundColor(Color("Button"))
-                            .frame(width: 140, height: 50))
+                        .background(Color("Button"))
+                        .cornerRadius(25)
                         .overlay(Capsule().stroke(Color.white, lineWidth: 2))
                 }
                 Spacer()

@@ -13,9 +13,6 @@ import SwiftUI
 struct ContentView: View {
     //最初にPickerに表示する人数
     @State var boysNum: Int = 15
-    @State var girlsNum: Int = 15
-    let MAZ_BOY_NUMBER = 26
-    let MAX_GIRL_NUMBER = 26
     
     var body: some View {
         NavigationView{
@@ -25,25 +22,17 @@ struct ContentView: View {
                 
                 VStack {
                     Text("人数を入力")
-                        .font(.largeTitle)
+                        .font(.title)
+                 
                     Spacer()
-                    HStack{
-                        NumberPicker(title: "男子", number: $boysNum)
-                        NumberPicker(title: "女子", number: $girlsNum)
-                    }
-                    HStack {
-                        Text("男子：\(boysNum)人")
+                    VStack{
+                        Text("Aグループ：\(boysNum)人")
                             .font(.title)
-                            .padding()
-                        Text("女子：\(girlsNum)人")
-                            .font(.title)
-                            .padding()
+                        NumberPicker(number: $boysNum)
                     }
                     
-                    Text("合計：\(boysNum + girlsNum)人")
-                        .font(.title)
                     Spacer()
-                    NavigationLink(destination: RowsOfSeatsView(studentState: StudentState(boysNum: boysNum, girlsNum: girlsNum, total: boysNum + girlsNum))){
+                    NavigationLink(destination: NumberOfBGroupView(boysNum: boysNum)){
                         Text("次へ")
                             .foregroundColor(.white)
                             .font(.headline)
@@ -52,6 +41,7 @@ struct ContentView: View {
                             .cornerRadius(25)
                             .overlay(Capsule().stroke(Color.white, lineWidth: 2))
                     }
+                 
                     Spacer()
                 }
             }

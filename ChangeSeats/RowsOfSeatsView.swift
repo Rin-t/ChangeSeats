@@ -17,11 +17,8 @@ struct StudentState {
         self.boysNumber = boysNum
         self.girlsNumber = girlsNum
         self.totalStudentNumber = total
-    }   
+    }
 }
-
-
-
 
 
 struct RowsOfSeatsView: View {
@@ -37,46 +34,34 @@ struct RowsOfSeatsView: View {
                 .edgesIgnoringSafeArea(.all)
             VStack {
                 Text("座席の列数を入力")
-                    .font(.largeTitle)
-                Spacer()
-                HStack{
-                    VStack {
-                        Text("タテ")
-                            .font(.title)
-                        Picker(selection: $columns, label: Text("")) {
-                            ForEach(1..<MaxColumnsNumber, id: \.self) { index in
-                                Text(String(index))
-                            }
-                        }
-                        .frame(width: 200)
-                    }
-                    
-                    VStack {
-                        Text("ヨコ")
-                            .font(.title)
-                        
-                        Picker(selection: $rows, label: Text("")) {
-                            ForEach(1..<MaxRowsNumber, id: \.self) { index in
-                                Text(String(index))
-                            }
-                        }
-                        .frame(width: 200)
-                        .pickerStyle(WheelPickerStyle())
-                        .onReceive([self.MaxRowsNumber].publisher.first()) { (value) in }
-                        .labelsHidden()
-                    }
-                }
+                    .font(.title)
+                    .padding(.bottom, 10)
                 
-                HStack {
+                VStack{
                     Text("タテ：\(columns)列")
                         .font(.title)
-                        .padding()
+                    
+                    Picker(selection: $columns, label: Text("")) {
+                        ForEach(1..<MaxColumnsNumber, id: \.self) { index in
+                            Text(String(index))
+                        }
+                    }
+                    .frame(width: 100, height: 140)
+                    
+                    
                     Text("ヨコ：\(rows)列")
                         .font(.title)
-                        .padding()
+
+                    Picker(selection: $rows, label: Text("")) {
+                        ForEach(1..<MaxRowsNumber, id: \.self) { index in
+                            Text(String(index))
+                        }
+                    }
+                    .frame(width: 100, height: 140)
+                    
+                    
                 }
                 
-                Spacer()
                 
                 if rows * columns < studentState.totalStudentNumber {
                     Text("席の数が足りません")
@@ -85,9 +70,8 @@ struct RowsOfSeatsView: View {
                         .foregroundColor(.white)
                         .font(.headline)
                         .frame(width: 140, height: 50)
-                        .background(Capsule()
-                            .foregroundColor(Color("Button"))
-                            .frame(width: 140, height: 50))
+                        .background(Color("Button"))
+                        .cornerRadius(25)
                         .overlay(Capsule().stroke(Color.white, lineWidth: 2))
                     
                 } else {
@@ -98,19 +82,18 @@ struct RowsOfSeatsView: View {
                                 .foregroundColor(.white)
                                 .font(.headline)
                                 .frame(width: 140, height: 50)
-                                .background(Capsule()
-                                    .foregroundColor(.blue)
-                                    .frame(width: 140, height: 50))
+                                .background(Color.blue)
+                                .cornerRadius(25)
                                 .overlay(Capsule().stroke(Color.white, lineWidth: 2))
-                        
+                            
                         }
-                    
+                        
                     }
                     
                 }
                 Spacer()
             }
-        
+            
         }
         
         

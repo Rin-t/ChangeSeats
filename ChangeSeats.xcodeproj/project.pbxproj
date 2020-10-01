@@ -13,6 +13,7 @@
 		2427B1922516508900B6DE7F /* SelectBoyOrGirlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2427B1912516508900B6DE7F /* SelectBoyOrGirlView.swift */; };
 		2427B197251650BA00B6DE7F /* PresetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2427B196251650BA00B6DE7F /* PresetView.swift */; };
 		2427B1A42516514A00B6DE7F /* DetailPresetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2427B1A32516514A00B6DE7F /* DetailPresetView.swift */; };
+		243A105625221E9000D90550 /* NumberOfBGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243A105525221E9000D90550 /* NumberOfBGroupView.swift */; };
 		2455B5F425031E3700D4759C /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2455B5F325031E3700D4759C /* Int.swift */; };
 		247AC36124F320AA004041C7 /* ExplanationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247AC36024F320AA004041C7 /* ExplanationView.swift */; };
 		247AC36324F320D6004041C7 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247AC36224F320D6004041C7 /* Result.swift */; };
@@ -50,6 +51,7 @@
 		2427B1912516508900B6DE7F /* SelectBoyOrGirlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectBoyOrGirlView.swift; sourceTree = "<group>"; };
 		2427B196251650BA00B6DE7F /* PresetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresetView.swift; sourceTree = "<group>"; };
 		2427B1A32516514A00B6DE7F /* DetailPresetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPresetView.swift; sourceTree = "<group>"; };
+		243A105525221E9000D90550 /* NumberOfBGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberOfBGroupView.swift; sourceTree = "<group>"; };
 		2455B5F325031E3700D4759C /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 		247AC36024F320AA004041C7 /* ExplanationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplanationView.swift; sourceTree = "<group>"; };
 		247AC36224F320D6004041C7 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				2427B1822516502100B6DE7F /* ContentView.swift */,
+				243A105525221E9000D90550 /* NumberOfBGroupView.swift */,
 				2427B1872516504D00B6DE7F /* RowsOfSeatsView.swift */,
 				2427B18C2516507400B6DE7F /* SelectUnusedSeatsView.swift */,
 				2427B1912516508900B6DE7F /* SelectBoyOrGirlView.swift */,
@@ -299,6 +302,7 @@
 				2427B1A42516514A00B6DE7F /* DetailPresetView.swift in Sources */,
 				2427B1922516508900B6DE7F /* SelectBoyOrGirlView.swift in Sources */,
 				24C0419724E44F470088E4CB /* AppDelegate.swift in Sources */,
+				243A105625221E9000D90550 /* NumberOfBGroupView.swift in Sources */,
 				24C0419924E44F470088E4CB /* SceneDelegate.swift in Sources */,
 				2427B18D2516507400B6DE7F /* SelectUnusedSeatsView.swift in Sources */,
 				2427B1882516504D00B6DE7F /* RowsOfSeatsView.swift in Sources */,
@@ -479,6 +483,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.r.t.astronomy.ChangeSeats;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -499,6 +504,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.r.t.astronomy.ChangeSeats;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
