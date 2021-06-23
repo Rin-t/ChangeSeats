@@ -3,7 +3,7 @@ import SwiftUI
 struct NumberPicker: View {
     
     @Binding var number: Int
-    let maxNumber: Int = 41
+    let maxNumber: Int = 46
     
     var body: some View {
         

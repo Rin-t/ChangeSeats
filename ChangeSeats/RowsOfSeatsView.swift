@@ -25,7 +25,7 @@ struct RowsOfSeatsView: View {
     let studentState: StudentState
     @State var rows = 6
     @State var columns = 6
-    let MaxColumnsNumber = 8
+    let MaxColumnsNumber = 10
     let MaxRowsNumber = 9
     
     var body: some View {
